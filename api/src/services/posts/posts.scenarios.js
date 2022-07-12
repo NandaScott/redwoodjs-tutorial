@@ -1,19 +1,10 @@
 export const standard = defineScenario({
   post: {
     one: {
-      data: {
-        title: 'String',
-        body: 'String',
-        updatedAt: '2022-07-08T20:59:32Z',
-      },
+      data: { title: 'String', body: 'String' }
     },
-
     two: {
-      data: {
-        title: 'String',
-        body: 'String',
-        updatedAt: '2022-07-08T20:59:32Z',
-      },
+      data: { title: 'String', body: 'String' }
     },
   },
 })

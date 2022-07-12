@@ -1,11 +1,5 @@
 import { posts, post, createPost, updatePost, deletePost } from './posts'
 
-// Generated boilerplate tests do not account for all circumstances
-// and can fail without adjustments, e.g. Float and DateTime types.
-//           Please refer to the RedwoodJS Testing Docs:
-//       https://redwoodjs.com/docs/testing#testing-services
-// https://redwoodjs.com/docs/testing#jest-expect-type-considerations
-
 describe('posts', () => {
   scenario('returns all posts', async (scenario) => {
     const result = await posts()
@@ -21,16 +15,11 @@ describe('posts', () => {
 
   scenario('creates a post', async () => {
     const result = await createPost({
-      input: {
-        title: 'String',
-        body: 'String',
-        updatedAt: '2022-07-08T20:59:32Z',
-      },
+      input: { title: 'String', body: 'String' },
     })
 
     expect(result.title).toEqual('String')
     expect(result.body).toEqual('String')
-    expect(result.updatedAt).toEqual('2022-07-08T20:59:32Z')
   })
 
   scenario('updates a post', async (scenario) => {
